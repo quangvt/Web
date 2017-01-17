@@ -96,7 +96,6 @@ Controller(processing)
 + HTTP Pipeline:
 + HTTP Modules/Handler/Modules
 
-
 - Demo:
 + Create web site
 + Post data
@@ -123,12 +122,31 @@ ASP.NET Core is fully open source and available on GitHub
 + Startup.cs
 + view: <form asp-contrroller="Account" asp-action...=> new in MVC (purple color)
 
-
 ================================================================================
 07. Strategic Comparison
 
+- ASP.NET vs. ASP.NET Core
++ Require Windows         | Cross-platform
++ Web Forms/Web Pages/MVC | Web Pages, MVC
++ .NET Framework          | .NET COre & .NET Framework (target full framework on Windows)
+                          | Unified syntax and controllers
+                          | Dependency injection
 
+- Web Forms
+Strengths vs. Challenges
+  Established maturity          | "Bloated": - Object model and events/Viewstate;
+  Rapid application development | Not support in ASP.NET Core
+  Strong 3rd party support
 
+- MVC
+Strengths vs. Challenges
+ Emphasis on 'separation of concerns' | Stronger developer skills needed
+ Supported in ASP.NET Core
+ Strong adoption
 
-
+- MVC
+Strengths vs. Challenges
+  Serer code embedded in HTML | Server code embedded in HTML
+  Dynamic compilation         | Smaller adoption
+  Supported in ASP.NET Core
 
