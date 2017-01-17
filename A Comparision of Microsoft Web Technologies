@@ -1,0 +1,50 @@
+COURSE - A Comparision between Microsoft Web Technologies
+================================================================================
+01. Course Overview
+A. Overview;
+B. Web Forms
+C. Web Pages
+D. MVC
+E. ASP.NET Core
+F. Comparision
+
+================================================================================
+02. An Introduction to the Microsoft Web Platform
+(Sites: WebForms/WebPages/MVC; Services: Web API/SignalR)
+(ASP.NET Core/ASP.NET)
+1. Tooling:
+- Visual Studio 2015: Win/ASP.NET/ASP.NET Core
+- Visual Studio Code: Win/Mac/Linux/ASP.NET Core
+2. Web Tech Overview
+- How the Web Works:
++ http/async HTTP
+3. Sizing the developer environment
+- Solution vs .Folder
+- Rich UI vs. lightweight text-intensive
+
+================================================================================
+03. Understanding How Web Forms Work
+- Processing Web Forms: 
+HTTP Pipeline
++ <send> http://site/page[.aspx]
++ HTTP Modules: Run serials of HTTP Modules, examin, round, determine how
+  http request should be handle.
++ HTTP Handler: process
++ HTTP Modules: adjustment
+* ASP.NET Web Forms: (www.asp.net/get-started/websites)
+
+- "Classic" ASP => Rapid App Development => Windows Forms Developer => Web Forms
+Developers
+- Characters: 
++ Object-oriented
++ Event-driven
++ Supports separation of markup from logic
++ Pre-compilation or dynamic compilation
++ Remarkable integration of Visual Studio: Design View/Controls(any manry 3rd 
+party/Data binding
++ Maturity
+
+- Demo
+
+================================================================================
+04. Understanding How Web Pages Work
