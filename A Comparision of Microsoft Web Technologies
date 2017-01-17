@@ -45,6 +45,90 @@ party/Data binding
 + Maturity
 
 - Demo
++ .aspx (About/Default)
++ Tabs: Design/Split/Source => WYSIWUG
++ Master Page: ~/Site.Master
++ Inherits: [Namespace].[Class]
++ Contents/CSS
++ Global.asax
 
 ================================================================================
 04. Understanding How Web Pages Work
+- Understanding How Web Pages Work: Describe/Processing/Demos
+
+- Desribing: (www.asp.net/web-pages) => ASP.NET Web Pages and the new Razor syntax provide
+a fast, approachable, and lightweight way to combine server code with HTML to 
+create dynamic web content.
++ inline code ...
++ Blend of markup with server side code (cshtml)
++ Razor syntax
++ Dynamic compilation (not include code behind) => compiled at the first time
+web pages is requested.
++ Compares closest to "APS"
+
+- Processing: 
++ http://site/page[.cshtml]
++ HTTP Modules
++ HTTP Handler (process server code: cshtml)
++ HTTP Modules
+
+- Demos:
++ Create: Create New Web Site (ASP.NET Web Site (Razor v3))
++ Folder Struct: About.cshtml/Default.cshtml
++ Key:
+  ~ _AppStart.cshtml
+  ~ Layout = "~/_SiteLayout.cshtml";
+
+================================================================================
+05. Understanding How MVC Work
+- How MVC Work: Describle/Processing/Demo
+
+- Describing: www.asp.net/mvc
++ ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites
+that enables a clean separation of concerns and that gives you full control
+over markup for enjoyable, agile development.
++ Emphasis on "separation of concerns": Model(data)/View(user-interface)/C
+Controller(processing)
++ Mature with continued investment
+
+- Processing: 
++ HTTP Request: http://site/ => {default controler} / {default action}
++ HTTP Pipeline:
++ HTTP Modules/Handler/Modules
+
+
+- Demo:
++ Create web site
++ Post data
++ Consume and display a list of data
+
+================================================================================
+06. Understanding How ASP.NET Core Work
+- Understanding: Describing/Processing/Demos
+- Describing: www.asp.net/vnext
+ASP.NET Core is a lean framework for building web and cloud applications.
+ASP.NET Core is fully open source and available on GitHub
++ .NET Core 1.0 (lightweight)
++ Cross-platform development
++ Host on IIS or own process
++ Open-source and community focused
++ Newer with strong investment
+
+- Processing
++ HTTP Request: http://site/page
++ Startup.cs
+
+- Demo
++ project.json (ref, depend, ...)
++ Startup.cs
++ view: <form asp-contrroller="Account" asp-action...=> new in MVC (purple color)
+
+
+================================================================================
+07. Strategic Comparison
+
+
+
+
+
+
