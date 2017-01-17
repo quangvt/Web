@@ -1,22 +1,23 @@
-COURSE - A Comparision between Microsoft Web Technologies
 ================================================================================
 01. Course Overview
-A. Overview;
-B. Web Forms
-C. Web Pages
-D. MVC
-E. ASP.NET Core
-F. Comparision
+02. An Introduction to the Microsoft Web Platform
+03. Understanding How Web Forms Work
+04. Understanding How Web Pages Work
+05. Understanding How MVC Work
+06. Understanding ASP.NET Core Work
+07. Strategic Comparison
 
 ================================================================================
 02. An Introduction to the Microsoft Web Platform
-(Sites: WebForms/WebPages/MVC; Services: Web API/SignalR)
-(ASP.NET Core/ASP.NET)
-1. Tooling:
-- Visual Studio 2015: Win/ASP.NET/ASP.NET Core
-- Visual Studio Code: Win/Mac/Linux/ASP.NET Core
-2. Web Tech Overview
-- How the Web Works:
+  Layer 1: Frameworks:  ASP.NET/ASP.NET Core;
+  Layer 2: Services:    Web API/SignalR
+  Layer 3: Sites:       WebForms/WebPages/MVC
+
+1. Tools
+- Visual Studio 2015: Platform Windows, support ASP.NET/ASP.NET Core
+- Visual Studio Code: Platform Windows/macOS/Linux, supprot ASP.NET Core
+2. Web Technologies Overview
+- How the Web Works
 + http/async HTTP
 3. Sizing the developer environment
 - Solution vs .Folder
@@ -24,18 +25,10 @@ F. Comparision
 
 ================================================================================
 03. Understanding How Web Forms Work
-- Processing Web Forms: 
-HTTP Pipeline
-+ <send> http://site/page[.aspx]
-+ HTTP Modules: Run serials of HTTP Modules, examin, round, determine how
-  http request should be handle.
-+ HTTP Handler: process
-+ HTTP Modules: adjustment
-* ASP.NET Web Forms: (www.asp.net/get-started/websites)
 
-- "Classic" ASP => Rapid App Development => Windows Forms Developer => Web Forms
-Developers
-- Characters: 
+- Describing: "Classic" ASP => Rapid App Development => Windows Forms Developer
+  => Web Forms Developers
+Characters 
 + Object-oriented
 + Event-driven
 + Supports separation of markup from logic
@@ -44,8 +37,17 @@ Developers
 party/Data binding
 + Maturity
 
-- Demo
-+ .aspx (About/Default)
+- Processing: 
+HTTP Pipeline
++ <send> http://site/page[.aspx] <recent support simple url>
++ HTTP Modules: Run serials of HTTP Modules, examin, round, determine how
+  http request should be handle.
++ HTTP Handler: process
++ HTTP Modules: adjustment
+* ASP.NET Web Forms: (www.asp.net/get-started/websites)
+
+- Demo:
++ suffix: .aspx (About/Default)
 + Tabs: Design/Split/Source => WYSIWUG
 + Master Page: ~/Site.Master
 + Inherits: [Namespace].[Class]
@@ -54,11 +56,10 @@ party/Data binding
 
 ================================================================================
 04. Understanding How Web Pages Work
-- Understanding How Web Pages Work: Describe/Processing/Demos
 
-- Desribing: (www.asp.net/web-pages) => ASP.NET Web Pages and the new Razor syntax provide
-a fast, approachable, and lightweight way to combine server code with HTML to 
-create dynamic web content.
+- Desribing: (www.asp.net/web-pages) => ASP.NET Web Pages and the new Razor 
+syntax provide a fast, approachable, and lightweight way to combine server code
+with HTML to create dynamic web content.
 + inline code ...
 + Blend of markup with server side code (cshtml)
 + Razor syntax
@@ -81,13 +82,12 @@ web pages is requested.
 
 ================================================================================
 05. Understanding How MVC Work
-- How MVC Work: Describle/Processing/Demo
 
 - Describing: www.asp.net/mvc
-+ ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites
-that enables a clean separation of concerns and that gives you full control
-over markup for enjoyable, agile development.
-+ Emphasis on "separation of concerns": Model(data)/View(user-interface)/C
++ ASP.NET MVC gives you a powerful, patterns-based way to build dynamic 
+websites that enables a clean separation of concerns and that gives you full
+control over markup for enjoyable, agile development.
++ Emphasis on "separation of concerns": Model(data)/View(user-interface)/ 
 Controller(processing)
 + Mature with continued investment
 
@@ -103,7 +103,7 @@ Controller(processing)
 
 ================================================================================
 06. Understanding How ASP.NET Core Work
-- Understanding: Describing/Processing/Demos
+
 - Describing: www.asp.net/vnext
 ASP.NET Core is a lean framework for building web and cloud applications.
 ASP.NET Core is fully open source and available on GitHub
@@ -120,21 +120,23 @@ ASP.NET Core is fully open source and available on GitHub
 - Demo
 + project.json (ref, depend, ...)
 + Startup.cs
-+ view: <form asp-contrroller="Account" asp-action...=> new in MVC (purple color)
++ view: <form asp-contrroller="Account" asp-action...=> new in MVC (purple 
+color)
 
 ================================================================================
 07. Strategic Comparison
 
 - ASP.NET vs. ASP.NET Core
-+ Require Windows         | Cross-platform
-+ Web Forms/Web Pages/MVC | Web Pages, MVC
-+ .NET Framework          | .NET COre & .NET Framework (target full framework on Windows)
+  Require Windows         | Cross-platform
+  Web Forms/Web Pages/MVC | Web Pages, MVC
+  .NET Framework          | .NET COre & .NET Framework (target full framework 
+                          |    on Windows)
                           | Unified syntax and controllers
                           | Dependency injection
 
 - Web Forms
 Strengths vs. Challenges
-  Established maturity          | "Bloated": - Object model and events/Viewstate;
+  Established maturity          | "Bloated": Object model and events/Viewstate
   Rapid application development | Not support in ASP.NET Core
   Strong 3rd party support
 
@@ -150,3 +152,5 @@ Strengths vs. Challenges
   Dynamic compilation         | Smaller adoption
   Supported in ASP.NET Core
 
+-- THE END --
+Thanks for reading
