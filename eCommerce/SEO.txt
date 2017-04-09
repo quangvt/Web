@@ -1,0 +1,11 @@
+SEO draft
+1. Keyword-rich URL => URL rewriting
+2. Properly redirect old URL or mistype URL to the correct.
+URL canonicalization
+3. Request to default.aspx and index.html to /.
+don't want same content in different URL
+=> implicit or explicit search penalties
+4. use 404 and 500 status code
+- 404: page not found
+- 500: internal error
+correctly to reflect problems with pages in the site
