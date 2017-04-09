@@ -9,3 +9,22 @@ don't want same content in different URL
 - 404: page not found
 - 500: internal error
 correctly to reflect problems with pages in the site
+
+SEO continues
+- page heading & other markup
+- dont' duplicate pages, page fragments
+- easy reachable
+- has title reflect its contents
+- paginated with links to all the subpages. So easy to human and search engine
+- product images have relevant alt attributes
+- dont' use flash or ajax(whose content is unreachable by search engine to generate content)
+
+Implement
+1. Keyword-rich URL
+- dynamic URL
+- keyword-rich URL
+URL Rewriting & Regular Expression
+2. Using the 301 & 302 HTTP Status Codes
+- permanently & temporary
+=> site has been indexed by search engineer
+3. Correct signaling 404 and 500
