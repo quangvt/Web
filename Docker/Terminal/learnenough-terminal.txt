@@ -1,0 +1,177 @@
+Command Line Common Commands
+
+1. echo "hello world"
+
+2. man echo
+
+3. ^A => CTRL+A : Back start of line
+^E => : Forward to end of line
+^U => : Clear to start of line
+
+4. clear
+=> ^L
+
+5. exit
+=> ^D
+
+6. ^C => out of truble
+
+7. echo "Write this line to text" > abc.txt
+$ echo "That thereby beauty's Rose might never die," >> sonnet_1.txt
+=> >> append text
+
+8. cat abc.txt
+=> concatenate
+=> print contents of file to screen
+
+9. diff abc.txt def.txt
+
+10. ls (listing)
+
+11. $touch foo
+=> create an empty file
+
+12. $ls *.txt
+$ls -l *.txt
+=> list long form
+$ls -rtl
+=> Long by reverse modification time
+$ls -a
+=> list all (including hidden)
+
+13. Renaming, copying, deleting
+$mv old_name.abc new_name.xyz
+=> rename(move)
+$cp file1.txt file2.txt
+=> copy
+$rm second_test.txt
+=> remove second_test.txt? y
+$rm -f <file> force-remove file
+
+14. Tab completion
+
+==================
+list/move/copy/remove, ls, mv, cp, rm
+
+DOWNLOAD A FILE
+15. curl
+=> interact with URL at the command line
+=> "which" looks to see if ...
+$ which curl
+=>
+$ curl -OL cdn.learnenough.com/sonnets.txt
+- letter "O"
+$ !curl
+$ !c => view all command start with "c"
+$ !! => previous command
+
+16. curl -I https://www.learnenough.com
+=> 
+
+17. Head & Tail
+$heal <file>
+$tail <file>
+
+17. $wc <file> => wordcount and pipes
+$wc abc.txt
+num1 num2 num3 file
+line, word, bytes
+=> piping the result of head through wc
+=> head sonnets.txt | wc
+10 46 294
+$head -n <i> sonnets.txt | tail -n <j>
+$ping learnenough.com > learnenough.log
+$tail -f
+
+18. Less and More
+$less
+-quit: q
+-row: move down, move up
+-page: ^F, ^B
+-search: $less /rose => next match press "n", previous match "N"
+-G: move end; 1G: move begin; 17G: move line 17
+- spacebar: move forward one page
+
+19. Grepping & history
+=> one of most powerful tools for inspecting file contents is GREP, 
+$grep rose sonnets.txt
+=> search "rose" in sonnets.txt
+$grep rose sonnets.txt | wc
+10 82 419
+(10 lines contain "rose")
+case-sensitive default
+$ grep -i rose sonnets.txt | wc
+insanely powerful, especially combined with Regular Expression
+$ grepping processes
+filter Unix process list that match a string.
+like to kill a rogue process
+$ top (which shows the processes consuming the most resources)
+$ ps aux
+=> see all processes
+ps: process status
+$ ps aux | grep spring
+=> filter processes by prog name, you pipe the results of ps through the grep
+$ kill -15 12241<pid>
+=> kill individual processes
+$ pkill -15 -f spring<name>
+=> kill with name
+$ grep -i(find case-insensitively) rose; -v
+$ kill -<level> <pid>
+$ !n (!17) executes the 17th command in the command history.
+
+19. Directory
+19.1 Directory Structure
+~/ruby/projects
+/Users/mhartl/ruby/projects
+$ sudo
+=> gives ordinary users the power to execute commands as the superuser. 
+===
+$ rm -f /opt/foo
+ rm: /opt/foo: Permission denied
+ $ sudo !!
+ $ !ls
+ ls: /opt/foo: No such file or directory
+===
+sudo: substitute user + do
+19.2 Making directories
+$ mkdir text_files
+$ mv *.txt text_files/
+$ ls text_files/
+$ ls -d text_files/ (just directory)
+$ ls -ld text_files/
+$ pwd (print working directory)
+19.3 Navigating directories
+$ cd ..
+$ cd => home directory
+$ cd ~ => home directory
+* . "the current directory"
+$ cp ~/text_files/sonnets.txt .
+====
+$ cd
+$ find . -name '*.txt'
+====
+$ cd ~/ruby/projects
+$ open .
+===
+$ cd - => previous directory
+$ ./configure ; make ; make install
+=> run the "congigure" program from the current directory ".", and then runs both make and make install. separate by ; => three command
+$ ./configure && make && make install
+=> diff is that commands separated by && run only if the previous command succeeded. In constrast with ; all the command will be run no matter what.
+$ build_article && cd ~/tau && deploy && cd -
+=> build an article in one directory, cd to diff directory, deploy to production, then cd back (cd -) to the original directory.
+19.4 renaming, copying, and deleting directories
+$ mkdir foo
+$ mv foo/ bar/
+$ cd foo/
+-bash: cd: foo: no such file or directory
+$ cd bar/
+$ cp -r ../text_files (-r: recursive)
+$ cp ../text_files/* .
+$ rm -rf second_directory (recursive and force)
+$ grep -r text text_files
+$ grep -ri text text_files
+
+20. mhartl/users/ruby
+
+
