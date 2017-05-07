@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)file:///Users/quangvu/Storage/Study/Udemy/completewebdev/project_codeplayer/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Learning jQuery</title>
+    
+    <meta http-equip="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewpoint" content="width=device-width, initial=scale">
+    
+    <script type="text/javascript" src="./Learning jQuery_files/jquery-3.1.1.min.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+            font-weight: 300;
+        }
+        
+        #menuBar {
+            width: 100%;
+            height: 40px;
+            background-color: #e0e0e0;
+            border-bottom: 1px solid grey;
+        }
+        
+        #logo {
+            padding: 5px 0 0 20px;
+            font-weight: bold;
+            font-size: 120%;
+            float: left;
+        }
+        
+        #buttonDiv {
+            float: right;
+            padding: 5px 10px 0 0;
+        }
+        
+        #runButton {
+            font-size: 120%;
+        }
+        
+        #toggles {
+            margin: 0 auto;
+            position: relative;
+            width: 200px;
+            border:1px solid grey;
+            border-radius:3px;
+            height: 27px;
+            list-style: none;
+            top: 5px;
+        }
+        
+        #toggles li {
+            border-right: 1px solid grey;
+            float: left;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .codeContainer {
+            background-color: blue;
+            height: 100%;
+            width: 50%;
+            float: left;
+            position: relative;
+        }
+        
+        .codeContainer textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-right: 1px solid grey;
+            font-family: monotype;
+            font-size: 90%;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        
+        .codeLabel {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        
+        #CSSContainer, #JSContainer {
+            display: none;
+        }
+        
+        iframe {
+            height: 100%;
+            position: relative;
+            left: 20px;
+            border: none;
+        }
+        
+        .selected {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="menuBar">
+            <div id="logo">
+                CodePlayer
+            </div>
+            <div id="buttonDiv">
+                <button id="runButton">Run</button>
+            </div>
+            <ul id="toggles">
+                <li class="toggle selected">HTML</li>
+                <li class="toggle selected">CSS</li>
+                <li class="toggle selected">JS</li>
+                <li class="toggle selected">Result</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="codeContainer" id="HTMLContainer" style="height: 564px; width: 25%;">
+            <div class="codeLabel">HTML</div>
+            <textarea>Example Code</textarea>
+        </div>
+        <div class="codeContainer" id="CSSContainer" style="height: 564px; display: block; width: 25%;">
+            <div class="codeLabel">CSS</div>
+            <textarea>Example Code</textarea>
+        </div>
+        <div class="codeContainer" id="JSContainer" style="height: 564px; width: 25%; display: block;">
+            <div class="codeLabel">JS</div>
+            <textarea>Example Code</textarea>
+        </div>
+        <div class="codeContainer" id="ResultContainer" style="height: 564px; width: 25%;">
+            <div class="codeLabel">Result</div>
+            <iframe src="./Learning jQuery_files/saved_resource.html"></iframe>
+        </div>
+    </div>
+    
+    <script>
+        var windowHeight = $(window).height();
+        var menuBarHeight = $("#menuBar").height();
+        var codeContainerHeight = windowHeight - menuBarHeight;
+        
+        $(".codeContainer").height(codeContainerHeight+"px");
+        
+        $(".toggle").click(function(){
+            $(this).toggleClass("selected");
+            var activeDiv = $(this).html();
+
+            $("#"+activeDiv+"Container").toggle();
+            
+            var showingDivs = $(".codeContainer").filter(
+                function(){
+                        return ($(this).css("display") != "none");
+                   }).length;
+            var width = 100/showingDivs;
+            $(".codeContainer").width(width+"%");
+        })
+    </script>
+
+</body></html>
