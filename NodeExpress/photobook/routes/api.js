@@ -183,6 +183,7 @@ router.delete('/person/:entityId', function(req, res) {
     }
 });
 
+// for Food Tracker sample
 router.get('/meal', function(req, res) {
 
     pool.getConnection(function(err, connection) {
